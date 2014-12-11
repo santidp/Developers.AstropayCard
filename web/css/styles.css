@@ -1,0 +1,49 @@
+
+.color-apd-streamline{
+    background-color: #2290e9 !important;
+    border-color: #2290e9 !important;
+}
+
+.color-apd-classic{
+    background-color: #307ecc !important;
+    border-color: #307ecc !important;
+}
+
+.color-one-shot{
+    background-color: #08C !important;
+    border-color: #08C !important;
+}
+
+.color-pre-approval{
+    background-color: #0086B3 !important;
+    border-color: #0086B3 !important;
+}
+
+.color-apc{
+    background-color: #e2755f !important;
+    border-color: #e2755f !important;
+}
+
+.color-rounders{
+    background-color: #e8b10d !important;
+    border-color: #e8b10d !important;
+}
+
+.color-cashout-cash{
+    background-color: #82af6f !important;
+    border-color: #82af6f !important;
+}
+
+.color-cashout-card{
+    background-color: #009926 !important;
+    border-color: #009926 !important;
+}
+
+#apd-streamline-menu,
+#apd-classic-menu ,
+#cashout-cards-menu,
+#one-shot-menu, 
+#pre-approval-menu,
+#apc-menu{
+    display: none;
+}
