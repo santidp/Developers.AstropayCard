@@ -115,26 +115,26 @@
                             APD classic
                         </button>
 
-                        <button class="btn color-one-shot">
+                        <button class="btn color-one-shot" onclick="navigateOneShot()">
                             One shot
                         </button>
 
-                        <button class="btn color-pre-approval">
+                        <button class="btn color-pre-approval" onclick="navigatePreApproval()">
                             Pre-approval
                         </button>
 
                     </div>
 
                     <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
-                        <button class="btn color-apc">
+                        <button class="btn color-apc" onclick="navigateAPC()">
                             APC
                         </button>
 
-                        <button class="btn color-rounders">
+                        <button class="btn color-rounders" onclick="navigateRounders()">
                             Rounders
                         </button>
 
-                        <button class="btn color-cashout-cash">
+                        <button class="btn color-cashout-cash" onclick="navigateCashoutCash()">
                             Cashout cash
                         </button>
 
@@ -149,7 +149,7 @@
                 <ul class="nav nav-list" id="apd-streamline-menu">
                     <li class="active">
                         <a href="index.html">
-                            <i class="menu-icon fa fa-credit-card"></i>
+                            <i class="menu-icon fa fa-money"></i>
                             <span class="menu-text"> APD Streamline </span>
                         </a>
                         <b class="arrow"></b>
@@ -160,7 +160,7 @@
                 <ul class="nav nav-list" id="apd-classic-menu">
                     <li class="active">
                         <a href="index.html">
-                            <i class="menu-icon fa fa-tachometer"></i>
+                            <i class="menu-icon fa fa-money"></i>
                             <span class="menu-text"> APD Classic </span>
                         </a>
 
@@ -178,151 +178,6 @@
                         </a>
 
                         <b class="arrow"></b>
-
-                        <ul class="submenu">
-                            <li class="">
-                                <a href="#" class="dropdown-toggle">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-
-                                    Layouts
-                                    <b class="arrow fa fa-angle-down"></b>
-                                </a>
-
-                                <b class="arrow"></b>
-
-                                <ul class="submenu">
-                                    <li class="">
-                                        <a href="top-menu.html">
-                                            <i class="menu-icon fa fa-caret-right"></i>
-                                            Top Menu
-                                        </a>
-
-                                        <b class="arrow"></b>
-                                    </li>
-
-                                    <li class="">
-                                        <a href="two-menu-1.html">
-                                            <i class="menu-icon fa fa-caret-right"></i>
-                                            Two Menus 1
-                                        </a>
-
-                                        <b class="arrow"></b>
-                                    </li>
-
-                                    <li class="">
-                                        <a href="two-menu-2.html">
-                                            <i class="menu-icon fa fa-caret-right"></i>
-                                            Two Menus 2
-                                        </a>
-
-                                        <b class="arrow"></b>
-                                    </li>
-
-                                    <li class="">
-                                        <a href="mobile-menu-1.html">
-                                            <i class="menu-icon fa fa-caret-right"></i>
-                                            Default Mobile Menu
-                                        </a>
-
-                                        <b class="arrow"></b>
-                                    </li>
-
-                                </ul>
-                            </li>
-
-                            <li class="">
-                                <a href="typography.html">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    Typography
-                                </a>
-
-                                <b class="arrow"></b>
-                            </li>
-
-                            <li class="">
-                                <a href="#" class="dropdown-toggle">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-
-                                    Three Level Menu
-                                    <b class="arrow fa fa-angle-down"></b>
-                                </a>
-
-                                <b class="arrow"></b>
-
-                                <ul class="submenu">
-                                    <li class="">
-                                        <a href="#">
-                                            <i class="menu-icon fa fa-leaf green"></i>
-                                            Item #1
-                                        </a>
-
-                                        <b class="arrow"></b>
-                                    </li>
-
-                                    <li class="">
-                                        <a href="#" class="dropdown-toggle">
-                                            <i class="menu-icon fa fa-pencil orange"></i>
-
-                                            4th level
-                                            <b class="arrow fa fa-angle-down"></b>
-                                        </a>
-
-                                        <b class="arrow"></b>
-
-                                        <ul class="submenu">
-                                            <li class="">
-                                                <a href="#">
-                                                    <i class="menu-icon fa fa-plus purple"></i>
-                                                    Add Product
-                                                </a>
-
-                                                <b class="arrow"></b>
-                                            </li>
-
-                                            <li class="">
-                                                <a href="#">
-                                                    <i class="menu-icon fa fa-eye pink"></i>
-                                                    View Products
-                                                </a>
-
-                                                <b class="arrow"></b>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="">
-                        <a href="#" class="dropdown-toggle">
-                            <i class="menu-icon fa fa-list"></i>
-                            <span class="menu-text"> Payment status </span>
-
-                            <b class="arrow fa fa-angle-down"></b>
-                        </a>
-
-                        <b class="arrow"></b>
-
-                        <ul class="submenu">
-                            <li class="">
-                                <a href="tables.html">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    menu
-                                </a>
-
-                                <b class="arrow"></b>
-                            </li>
-
-                            <li class="">
-                                <a href="jqgrid.html">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    jqGrid plugin
-                                </a>
-
-                                <b class="arrow"></b>
-                            </li>
-                        </ul>
                     </li>
                 </ul><!-- /.nav-list -->
                 
@@ -359,7 +214,28 @@
                     </li>
                 </ul><!-- /.nav-list -->
 
-               
+               <!--Rounders menu-->
+                <ul class="nav nav-list" id="rounders-menu">
+                    <li class="active">
+                        <a href="index.html">
+                            <i class="menu-icon fa fa-credit-card"></i>
+                            <span class="menu-text"> Rounders </span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                </ul><!-- /.nav-list -->
+                
+                <!--Cashout cash menu-->
+                <ul class="nav nav-list" id="cashout-cash-menu">
+                    <li class="active">
+                        <a href="index.html">
+                            <i class="menu-icon fa fa-credit-card"></i>
+                            <span class="menu-text"> Cashout Cash </span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                </ul><!-- /.nav-list -->
+                
                 <!--Cashout Cards menu-->
                 <ul class="nav nav-list" id="cashout-cards-menu">
                     <li class="active">
@@ -526,6 +402,7 @@
                     </li>
                 </ul><!-- /.nav-list -->
 
+               
                 <!-- #section:basics/sidebar.layout.minimize -->
                 <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
                     <i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>

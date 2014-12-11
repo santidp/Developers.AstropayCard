@@ -41,9 +41,11 @@
 
 #apd-streamline-menu,
 #apd-classic-menu ,
-#cashout-cards-menu,
 #one-shot-menu, 
 #pre-approval-menu,
-#apc-menu{
+#apc-menu,
+#rounders-menu,
+#cashout-cash-menu,
+#cashout-cards-menu{
     display: none;
 }
