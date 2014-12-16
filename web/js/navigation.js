@@ -1,6 +1,10 @@
 
 $('#main-content').load('frames/home.html');
 
+function navigateHome(){
+    hideAll();
+    $('#main-content').load('frames/home.html');
+}
 
 function navigateAPDStreamline() {
     hideAll();
@@ -40,6 +44,7 @@ function navigateCashoutCash() {
 function navigateCashoutCards() {
     hideAll();
     $("#cashout-cards-menu").css("display", "block");
+    $('#main-content').load('frames/cashout-card-frame.html');
 }
 
 function hideAll() {

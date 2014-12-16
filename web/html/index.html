@@ -41,7 +41,7 @@
         <![endif]-->
 
 
-        <link rel="stylesheet" href="../css/styles.css" />
+        <link rel="stylesheet" href="../css/index.css" />
     </head>
 
     <body class="no-skin">
@@ -66,21 +66,17 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <!-- /section:basics/sidebar.mobile.toggle -->
                 <div class="navbar-header pull-left">
-                    <!-- #section:basics/navbar.layout.brand -->
                     <a href="#" class="navbar-brand">
                         <small>
-                            <i class="fa fa-leaf"></i>
+                            <i class="fa fa-credit-card"></i>
                             AstroPay
                         </small>
+                        <small class="small-subtitle">
+                            <i class="ace-icon fa fa-angle-double-right"></i>
+                            Developers
+                        </small>
                     </a>
-
-                    <!-- /section:basics/navbar.layout.brand -->
-
-                    <!-- #section:basics/navbar.toggle -->
-
-                    <!-- /section:basics/navbar.toggle -->
                 </div>
 
 
@@ -259,7 +255,7 @@
                     <li class="">
                         <a href="#" class="dropdown-toggle">
                             <i class="menu-icon fa fa-list"></i>
-                            <span class="menu-text"> URLs </span>
+                            <span class="menu-text"> Environments </span>
 
                             <b class="arrow fa fa-angle-down"></b>
                         </a>
@@ -278,93 +274,6 @@
                                 <a href="jqgrid.html">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Live
-                                </a>
-
-                                <b class="arrow"></b>
-                            </li>
-                        </ul>
-                    </li>
-                    
-                    <li class="">
-                        <a href="#" class="dropdown-toggle">
-                            <i class="menu-icon fa fa-list"></i>
-                            <span class="menu-text"> Request Cashout </span>
-
-                            <b class="arrow fa fa-angle-down"></b>
-                        </a>
-
-                        <b class="arrow"></b>
-
-                        <ul class="submenu">
-                            <li class="">
-                                <a href="tables.html">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    Parameters
-                                </a>
-                            </li>
-
-                            <li class="">
-                                <a href="jqgrid.html">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    Return
-                                </a>
-
-                                <b class="arrow"></b>
-                            </li>
-                        </ul>
-                    </li>
-                    
-                     <li class="">
-                        <a href="#" class="dropdown-toggle">
-                            <i class="menu-icon fa fa-list"></i>
-                            <span class="menu-text"> Check status </span>
-
-                            <b class="arrow fa fa-angle-down"></b>
-                        </a>
-
-                        <b class="arrow"></b>
-
-                        <ul class="submenu">
-                            <li class="">
-                                <a href="tables.html">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    Parameters
-                                </a>
-                            </li>
-
-                            <li class="">
-                                <a href="jqgrid.html">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    Return
-                                </a>
-
-                                <b class="arrow"></b>
-                            </li>
-                        </ul>
-                    </li>
-                    
-                    <li class="">
-                        <a href="#" class="dropdown-toggle">
-                            <i class="menu-icon fa fa-list"></i>
-                            <span class="menu-text"> Cancel cashout </span>
-
-                            <b class="arrow fa fa-angle-down"></b>
-                        </a>
-
-                        <b class="arrow"></b>
-
-                        <ul class="submenu">
-                            <li class="">
-                                <a href="tables.html">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    Parameters
-                                </a>
-                            </li>
-
-                            <li class="">
-                                <a href="jqgrid.html">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    Return
                                 </a>
 
                                 <b class="arrow"></b>
@@ -400,21 +309,18 @@
                             </li>
                         </ul>
                     </li>
+                    
+                      <li class="">
+                        <a href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-bomb"></i>
+                            <span class="menu-text"> Testing </span>
+
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                    </li>
                 </ul><!-- /.nav-list -->
 
-               
-                <!-- #section:basics/sidebar.layout.minimize -->
-                <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
-                    <i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
-                </div>
-
-                <!-- /section:basics/sidebar.layout.minimize -->
-                <script type="text/javascript">
-                    try {
-                        ace.settings.check('sidebar', 'collapsed')
-                    } catch (e) {
-                    }
-                </script>
+             
             </div>
 
             <!-- /section:basics/sidebar -->
@@ -432,7 +338,7 @@
                         <ul class="breadcrumb">
                             <li>
                                 <i class="ace-icon fa fa-home home-icon"></i>
-                                <a href="#">Home</a>
+                                <a href="#" onclick="navigateHome()">Home</a>
                             </li>
                         </ul><!-- /.breadcrumb -->
 
@@ -451,19 +357,6 @@
 
                     <!-- /section:basics/content.breadcrumbs -->
                     <div class="page-content">
-                        <!-- #section:settings.box -->
-
-                        <!-- /section:settings.box -->
-                        <div class="page-header">
-                            <h1>
-                                AstroPay
-                                <small>
-                                    <i class="ace-icon fa fa-angle-double-right"></i>
-                                    Developers
-                                </small>
-                            </h1>
-                        </div><!-- /.page-header -->
-
                         <div class="row">
                             <div class="col-xs-12">
                                 <!-- PAGE CONTENT BEGINS -->

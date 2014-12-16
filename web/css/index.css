@@ -49,3 +49,7 @@
 #cashout-cards-menu{
     display: none;
 }
+
+.small-subtitle{
+    font-size:50%;
+}

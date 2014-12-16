@@ -10,7 +10,11 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-
+        <div class="page-header">
+            <h1>
+                AstroPay Products
+            </h1>
+        </div><!-- /.page-header -->
         <div class="row">
             <!-- #section:pages/pricing.large -->
             <div class="col-xs-6 col-sm-3 pricing-box">
@@ -41,7 +45,7 @@ and open the template in the editor.
                 </div>
             </div>
 
-            <div class="col-xs-6 col-sm-3 pricing-box"  >
+            <div class="col-xs-6 col-sm-3 pricing-box" onclick="navigateOneShot()" >
                 <div class="widget-box widget-color-blue color-one-shot">
                     <div class="widget-header color-one-shot" >
                         <h5 class="widget-title bigger lighter">One Shot</h5>
@@ -55,7 +59,7 @@ and open the template in the editor.
                 </div>
             </div>
 
-            <div class="col-xs-6 col-sm-3 pricing-box">
+            <div class="col-xs-6 col-sm-3 pricing-box" onclick="navigatePreApproval()">
                 <div class="widget-box widget-color-red color-pre-approval" >
                     <div class="widget-header color-pre-approval">
                         <h5 class="widget-title bigger lighter">Pre-approval</h5>
@@ -74,7 +78,7 @@ and open the template in the editor.
 
         <div class="row">
             <!-- #section:pages/pricing.large -->
-            <div class="col-xs-6 col-sm-3 pricing-box">
+            <div class="col-xs-6 col-sm-3 pricing-box" onclick="navigateAPC()">
                 <div class="widget-box widget-color-green color-apc">
                     <div class="widget-header color-apc">
                         <h5 class="widget-title bigger lighter">AstroPay Card</h5>
@@ -88,7 +92,7 @@ and open the template in the editor.
                 </div>
             </div>
 
-            <div class="col-xs-6 col-sm-3 pricing-box " onclick="navigateAPDClassic()">
+            <div class="col-xs-6 col-sm-3 pricing-box " onclick="navigateRounders()">
                 <div class="widget-box widget-color-blue color-rounders">
                     <div class="widget-header color-rounders">
                         <h5 class="widget-title bigger lighter">Rounders</h5>
@@ -102,7 +106,7 @@ and open the template in the editor.
                 </div>
             </div>
 
-            <div class="col-xs-6 col-sm-3 pricing-box"  onclick="navigateAPDStreamline()">
+            <div class="col-xs-6 col-sm-3 pricing-box"  onclick="navigateCashoutCash()">
                 <div class="widget-box widget-color-blue color-cashout-cash">
                     <div class="widget-header color-cashout-cash">
                         <h5 class="widget-title bigger lighter">Cashout Cash</h5>
@@ -117,7 +121,7 @@ and open the template in the editor.
             </div>
 
             <div class="col-xs-6 col-sm-3 pricing-box">
-                <div class="widget-box widget-color-red color-cashout-card">
+                <div class="widget-box widget-color-red color-cashout-card" onclick="navigateCashoutCards()">
                     <div class="widget-header color-cashout-card">
                         <h5 class="widget-title bigger lighter">Cashout Cards</h5>
                     </div>
