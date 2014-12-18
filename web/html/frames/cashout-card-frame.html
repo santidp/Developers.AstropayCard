@@ -13,46 +13,521 @@ and open the template in the editor.
     <body>
         <div class="col-sm-12">
             <div class="page-header">
-                <h1>
+                <h1 class="color-cashout-card">
                     Cashout Cards
                 </h1>
             </div><!-- /.page-header -->
 
-            <h1>Considerations</h1>
-            <p class="lead">
-                Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+            <h1>Introduction</h1>
+            <p>
+                Merchant will be able to create an AstroPay Card with the choosen value. 
+                The cost of the card plus a fee will be deducted from merchans account. <br>
+                Once a new Cashout Card is requested, the new card will be issued and sent to customer's email.
             </p>
+
+            <h1>Considerations</h1>
+
+            <h2> Technical Details </h2>
+            <ul>
+                <li>
+                    Communication between you and AstroPay should be made by POST. 
+                </li>
+                <li>
+                    The protocol used is purely HTTPS.
+                </li>
+                <li>
+                    Sensible information is sent server to server. 	
+                </li>
+                <li>
+                    The return format of the functions is json. 
+                </li>
+
+            </ul>
+
+            <h2> Security Details </h2>
+            <ul>
+                <li>
+                    A username and password must be used in all communications.  
+                </li>
+                <li>
+                    Both parties must use an HMAC-SHA-256 (RFC 2104) code to verify the 	integrity of the 
+                </li>
+                <li>
+                    information received from each side. 	
+                </li>
+                <li>
+                    HMAC‐SHA‐256 code (32 bytes) is generated using a key provided by AstroPay. 
+                    This code is converted to string as a hexadecimal representation of the 	code (64 upper chars). 	
+                </li>
+                <li>
+                    All communications between you and AstroPay should be made exclusively through registered IPs on both sides. 
+                </li>
+
+            </ul>
+
+            <h1>How to start?</h1>
+            <p>
+                Start creating your own account in our site <a>https://merchant.astropaycard.com/sign_up</a>. 
+                After you finished the register you will have access to your credentials, your account configuration and your backoffice at <a>https://www.merchant.astropaycard.com</a>.
+            </p>
+
+            <div class="alert alert-info color-cashout-card">
+                <strong>Remember: </strong>
+
+                register your server IP in the panel https://www.merchant.astropaycard.com in section Integration->Credentials & Settings
+                <br>
+            </div>
 
             <h1>Environments</h1>
             <p>
-                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.
-            </p>
-            <h2>Sandbox</h2>
+                Your account is associated with two different environments: Sandbox and Live.
+                Sandbox is a test environment available for integration development and testing which simulates
+                most of the requests and transactions available in the platform. On test environment no transactions will actually be processed. </p>
+
+            <h2>URLs, Credentials and account configuration</h2>
             <p>
-                Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+                Base URL for communication:
             </p>
-            <h2>Live</h2>
+
+            <h3>Sandbox</h3>
+            <p>                
+                <i class="ace-icon fa fa-globe bigger-125 color-cashout-card"></i>
+                <a  class="btn btn-link"> https://sandbox-api.astropaycard.com/cashOut/</a>
+            </p>
+
+            <h3>Live</h3>
             <p>
-                Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+                <i class="ace-icon fa fa-globe bigger-125 color-cashout-card"></i>
+                <a class="btn btn-link"> https://api.astropaycard.com/cashOut/</a>
             </p>
+
+            <div class="alert alert-info  color-cashout-card">
+                <strong>Note: </strong>
+
+                You will find your credentials in the panel, section Integration -> Credentials & Settings. It is important to notice that your credentials are different between both environments.
+                <br>
+            </div>
+            <div class="alert alert-info color-cashout-card">
+                <strong>Note: </strong>
+                After finishing your integration and tests, you should fill your account details in the panel Settings -> Merchant Account and Ask to go live. In that moment, your live credentials will be available under the Live tab.  
+                <br>
+            </div>
+
+            <h1>Function: Send Card</h1>
+            <p>
+                This function is used to create a Cashout Card.
+            </p>
+            <p>
+                POST:
+                <br>
+                <i class="ace-icon fa fa-globe bigger-125 color-cashout-card"></i>
+                <a class="btn btn-link"> https://api.astropaycard.com/cashOut/sendCard</a>
+            </p>
+            <h2> Request </h2>
+            <h3> Mandatory parameters </h3>
+
+            <table id="simple-table" class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Format</th>
+                        <th>Description</th>
+                        <th>Example </th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>x_login</td>
+                        <td>String (length: 10 chars)</td>
+                        <td>Your merchant ID in Astropay platform</td>
+                        <td>AsGsd35Grf</td>
+                        <td><span class="badge badge-danger background-color-cashout-card">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>x_trans_key</td>
+                        <td>String (length: 10 chars)</td>
+                        <td>Your merchant password in Astropay platform </td>
+                        <td>D23weF2f4g</td>
+                        <td><span class="badge badge-danger background-color-cashout-card">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>x_amount</td>
+                        <td>Decimal (max. 2 decimal numbers)</td>
+                        <td>Cashout amount</td>
+                        <td>100.95</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>x_currency</td>
+                        <td>String (length: 3 chars)</td>
+                        <td>Cashout currency</td>
+                        <td>EUR</td>
+                        <td><span class="badge badge-danger background-color-cashout-card">2</span></i></td>
+                    </tr>
+
+                    <tr>
+                        <td>x_email</td>
+                        <td>String (max. length: 100 chars)</td>
+                        <td>User email address</td>
+                        <td>astropay@astropaycard.com</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>x_control</td>
+                        <td>String (length: 3 chars)</td>
+                        <td>Control string calculated by you</td>
+                        <td>EUR</td>
+                        <td><span class="badge badge-danger background-color-cashout-card">3</span></td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <p>
+                <span class="badge badge-danger background-color-cashout-card">1</span>
+                x_login and x_trans_key are your credentials. Remember to find them in the panel, section Integration -> Credentials & Settings.
+            </p>
+
+            <p>
+                <span class="badge badge-danger background-color-cashout-card">2</span>
+                Available currencies
+            </p>
+            <p>
+                <span class="badge badge-danger background-color-cashout-card">3</span>
+                Control string: sha1($secret.number_format($x_amount,2).$x_currency.$x_email)
+            </p>
+
+            <h3> Optional parameters </h3>
+
+            <table id="simple-table" class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Format</th>
+                        <th>Description</th>
+                        <th>Example </th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>x_window</td>
+                        <td>Integer</td>
+                        <td>The time window after a transaction is taken as duplicated</td>
+                        <td>60</td>
+                        <td>10</td>
+                        <td><span class="badge badge-danger background-color-cashout-card">1</span></td>
+                    </tr>
+
+                    <tr>
+                        <td> x_reference</td>
+                        <td>String (length: 10 chars)</td>
+                        <td>Your internal cashout reference</td>
+                        <td>cashout_123</td>
+                        <td>10</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                <span class="badge badge-danger background-color-cashout-card">1</span>
+                        Transactions sent with same amount and card information, will be taken as duplicated transactions within a time window of 10 seconds.
+                        So, we don’t recommend doing batch transactions.
+            </p>
+            
+            <h2>Response</h2>
+            <div id="response"></div>
+            <table id="simple-table" class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Description</th>
+                        <th></th>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>code</td>
+                        <td>Response code</td>
+                        <td>200 if success. If not see <a>errors</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>message</td>
+                        <td>Response message</td>
+                        <td>"success" or <a>error message</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>response</td>
+                        <td>Response of request</td>
+                        <td>enum('SUCCESS','ERROR') </td>
+                    </tr>
+
+                    <tr>
+                        <td>id</td>
+                        <td>Astropay internal ID</td>
+                         <td>"success" or <a>error message</a></td>
+                    </tr>
+                    <tr>
+                        <td>code</td>
+                        <td>Response code</td>
+                        <td>"success" or <a>error message</a></td>
+                    </tr>
+                    <tr>
+                        <td>auth_code</td>
+                        <td>Astropay authentication code</td>
+                        <td>Use for VOID a cashout (not available)</td>
+                    </tr>
+
+                    <tr>
+                        <td>email</td>
+                        <td>user email</td>
+                        <td>Value sent in request</td>
+                    </tr>
+
+                    <tr>
+                        <td>amount</td>
+                        <td>cachout amount</td>
+                        <td>Value sent in request</td>
+                    </tr>
+                    <tr>
+                        <td>currency</td>
+                        <td>cachout currency</td>
+                        <td>Value sent in request</td>
+                    </tr>
+                    <tr>
+                        <td>signature</td>
+                        <td>*</td>
+                        <td>Value sent in request</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="alert alert-info color-cashout-card">
+                <strong>Notes: </strong>
+                <ul>
+                    <li>
+                        Once this method is invoked, the cashout amount is automatically discounted from your balance.
+                    </li>
+                    <li>
+                        It is your responsibility to send us the correct destination email address. We suggest asking for a confirmation after the user enter his email address.
+                    </li>
+                    <li>
+                        All cards are generated in USD (dollar). If you send a different currency we will convert the amount to USD.
+                    </li>
+                </ul>
+            </div>
+
+            <h3> Return examples </h3>
+
+            <div class="widget-box">
+                <div class="widget-header widget-header-flat">
+                    <h4 class="smaller">
+                        <i class="ace-icon fa fa-code"></i>
+                        Success
+                    </h4>
+                </div>
+
+                <div class="widget-body">
+                    <div class="widget-main">
+                        <ul>
+                            <li>
+                                {"code":200, "message":"success", "auth_code":"05ae7f7d", "response":"SUCCESS", "id":2, "email":"astropay@gmail.com", "amount":"1", "currency":"BRL", "signature":"39bf3080ced6bc14eca14addbb3b241060da800c"}
+                            </li>
+                        </ul>                   
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+            <div class="widget-box">
+                <div class="widget-header widget-header-flat">
+                    <h4 class="smaller">
+                        <i class="ace-icon fa fa-code"></i>
+                        Errors
+                    </h4>
+                </div>
+
+                <div class="widget-body">
+                    <div class="widget-main">
+                        <ul>
+                            <li>
+                                {"code":401, "message":"Invalid credentials"}
+                            </li>
+                            <li>
+                                {"code":409, "message":"Duplicated cashout", "response":"ERROR", "id":6, "email":"astropay@gmail.com", "amount":"10", "currency":"USD", "signature":"5f0cf4a8ffa2e4184433d960de4828b5bda44f76"}
+                            </li>
+                            <li>
+                                {"code":300, "message":"Amount must be a positive value", "response":"ERROR", "id":9,"email":"astropay@gmail.com", "amount":"-10", "currency":"USD", "signature":"d69c8de1e85aba44128afb2fbd822a53a349fccb"}
+                            </li>
+                            <li>
+                                {"code":302, "message":"Invalid control string", "response":"ERROR", "id":10, "email":"astropay@gmail.com", "amount":"10", "currency":"DSD", "signature":"c1ce79a310b2ae7b33f38990146c1168a7f4908b"}
+                            </li>
+                            <li>
+                                {"code":507, "message":"Invalid currency", "response":"ERROR", "id":11, "email":"astropay@gmail.com", "amount":"10", "currency":"USQ", "signature":"f5cf2efefdcfd333fa349da6ca55f491b1ae079f"}
+                            </li>
+                        </ul>                   
+                    </div>
+                </div>
+            </div>
 
             <h1>Errors</h1>
-            <p>
-                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.
-            </p>
+            
             <h2>References</h2>
-            <p>
-                Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
-            </p>
+
+            <table id="simple-table" class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Code range</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Syntax validation in parameter/s</td>
+                        <td>3xx</td>
+                    </tr>
+                    <tr>
+                        <td>Merchant identification validation </td>
+                        <td>4xx</td>
+                    </tr>
+                    <tr>
+                        <td>Business logic validation</td>
+                        <td>5xx</td>
+                    </tr>
+                    <tr>
+                        <td>Semantic validation in parameter/s</td>
+                        <td>6xx</td>
+                    </tr>
+                    <tr>
+                        <td>Transactional error</td>
+                        <td>7xx</td>
+                    </tr>
+                </tbody>
+            </table>
+
             <h2>Codes</h2>
+            <table id="simple-table" class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Syntax validation in parameter/s</th>
+                        <th>3xx</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>300</td>
+                        <td>Invalid + [param name]</td>
+                    </tr>
+                    <tr>
+                        <td>302</td>
+                        <td>Invalid control string</td>
+                    </tr>
+                    <tr>
+                        <td>401</td>
+                        <td>Invalid merchant credentials or inactive account </td>
+                    </tr>
+                    <tr>
+                        <td>403</td>
+                        <td>Merchant has no authorization to use this API</td>
+                    </tr>
+                    <tr>
+                        <td>500</td>
+                        <td>Insufficient founds</td>
+                    </tr>
+                    <tr>
+                        <td>508</td>
+                        <td>Limit exceeded</td>
+                    </tr>
+                    <tr>
+                        <td>512</td>
+                        <td>Duplicated cashout</td>
+                    </tr>
+                    <tr>
+                        <td>513</td>
+                        <td>Unknown currency</td>
+                    </tr>
+                    <tr>
+                        <td>700</td>
+                        <td>Merchant is not properly configured</td>
+                    </tr>
+                    <tr>
+                        <td>700</td>
+                        <td>Unable to load merchant information</td>
+                    </tr>
+                    <tr>
+                        <td>700</td>
+                        <td>Could not create authorization code</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <h1>Testing in Sandbox</h1>
             <p>
-                Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+                For testing error responses, in sandbox environment send the following email to function Send Card:
             </p>
 
-            <h1>Testing</h1>
-            <p>
-                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.
-            </p>
+            <table id="simple-table" class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Code (response) </th>
+                        <th>Description (response)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>cashout_302@mail.com</td>
+                        <td>302</td>
+                        <td>Invalid control string</td>
+                    </tr>
+
+                    <tr>
+                        <td>cashout_500@mail.com</td>
+                        <td>500</td>
+                        <td>Insufficient founds</td>
+                    </tr>
+
+                    <tr>
+                        <td>cashout_300@mail.com</td>
+                        <td>300</td>
+                        <td>Invalid amount</td>
+                    </tr>
+
+                    <tr>
+                        <td>cashout_508@mail.com</td>
+                        <td>508</td>
+                        <td>Limit exceeded</td>
+                    </tr>
+
+                    <tr>
+                        <td>cashout_512@mail.com</td>
+                        <td>512</td>
+                        <td>Duplicated cashout</td>
+                    </tr>
+
+                    <tr>
+                        <td>cashout_513@mail.com</td>
+                        <td>513</td>
+                        <td>Unknown currency</td>
+                    </tr>
+                </tbody>
+            </table>
+
         </div>
 
     </body>

@@ -29,6 +29,7 @@ function navigatePreApproval() {
 function navigateAPC() {
     hideAll();
     $("#apc-menu").css("display", "block");
+    $('#main-content').load('frames/astropay-card-frame.html');
 }
 
 function navigateRounders() {

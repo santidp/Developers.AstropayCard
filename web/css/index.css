@@ -20,8 +20,7 @@
 }
 
 .color-apc{
-    background-color: #e2755f !important;
-    border-color: #e2755f !important;
+    color: #0086B3 !important;
 }
 
 .color-rounders{
@@ -35,8 +34,17 @@
 }
 
 .color-cashout-card{
-    background-color: #009926 !important;
-    border-color: #009926 !important;
+    color: #D41A1A !important;
+}
+
+.background-color-cashout-card{
+    background:  #D41A1A !important; 
+    color: white;
+}
+
+.background-color-apc{
+    background:  #0086B3 !important; 
+    color: white;
 }
 
 #apd-streamline-menu,
@@ -52,4 +60,8 @@
 
 .small-subtitle{
     font-size:50%;
+}
+
+.main-logo{
+    width: 30%;
 }
