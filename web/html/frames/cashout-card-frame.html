@@ -27,7 +27,7 @@ and open the template in the editor.
 
             <h1>Considerations</h1>
 
-            <h2> Technical Details </h2>
+            <h2> Technical details </h2>
             <ul>
                 <li>
                     Communication between you and AstroPay should be made by POST. 
@@ -44,7 +44,7 @@ and open the template in the editor.
 
             </ul>
 
-            <h2> Security Details </h2>
+            <h2> Security details </h2>
             <ul>
                 <li>
                     A username and password must be used in all communications.  
@@ -84,7 +84,7 @@ and open the template in the editor.
                 Sandbox is a test environment available for integration development and testing which simulates
                 most of the requests and transactions available in the platform. On test environment no transactions will actually be processed. </p>
 
-            <h2>URLs, Credentials and account configuration</h2>
+            <h2>URLs, credentials & account configuration</h2>
             <p>
                 Base URL for communication:
             </p>
@@ -113,7 +113,7 @@ and open the template in the editor.
                 <br>
             </div>
 
-            <h1>Function: Send Card</h1>
+            <h1>Function: sendCard</h1>
             <p>
                 This function is used to create a Cashout Card.
             </p>
@@ -200,7 +200,7 @@ and open the template in the editor.
             </p>
             <p>
                 <span class="badge badge-danger background-color-cashout-card">3</span>
-                Control string: sha1($secret.number_format($x_amount,2).$x_currency.$x_email)
+                Control string: sha1($secret .$id . $x_email . number_format($x_amount,2) . $x_currency)
             </p>
 
             <h3> Optional parameters </h3>
@@ -232,7 +232,7 @@ and open the template in the editor.
                         <td>String (length: 10 chars)</td>
                         <td>Your internal cashout reference</td>
                         <td>cashout_123</td>
-                        <td>10</td>
+                        <td>-   </td>
                         <td></td>
                     </tr>
                 </tbody>
@@ -475,7 +475,7 @@ and open the template in the editor.
             </table>
 
 
-            <h1>Testing in Sandbox</h1>
+            <h1>Testing on Sandbox</h1>
             <p>
                 For testing error responses, in sandbox environment send the following email to function Send Card:
             </p>
