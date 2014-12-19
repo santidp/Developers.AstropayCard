@@ -20,7 +20,7 @@
 }
 
 .color-apc{
-    color: #0086B3 !important;
+    color: #D41A1A  !important;
 }
 
 .color-rounders{
@@ -34,16 +34,27 @@
 }
 
 .color-cashout-card{
+    color: #0086B3 !important;
+}
+
+.color-astropay{
     color: #D41A1A !important;
 }
 
-.background-color-cashout-card{
+.background-color-astropay{
     background:  #D41A1A !important; 
+    border-color: #D41A1A !important; 
     color: white;
 }
 
+.background-color-cashout-card{
+    background: #0086B3 !important; 
+    color: white;
+}
+
+
 .background-color-apc{
-    background:  #0086B3 !important; 
+    background: #D41A1A !important; 
     color: white;
 }
 

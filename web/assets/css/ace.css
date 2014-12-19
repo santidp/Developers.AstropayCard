@@ -1124,7 +1124,7 @@ pre.prettyprint {
   -webkit-box-shadow: none;
   box-shadow: none;
   min-height: 45px;
-  background: #C7C7C7;
+  background: #2f2f2;
 }
 .navbar .navbar-text,
 .navbar .navbar-link {
@@ -2372,9 +2372,10 @@ body.mob-safari .sidebar.sidebar-fixed {
 .sidebar .sidebar-shortcuts-large {
   line-height: 37px;
 }
+
 .sidebar .sidebar-shortcuts-large > .btn {
   text-align: center;
-  width: 41px;
+  width: 47%;
   line-height: 24px;
   padding: 0;
   border-width: 4px;
@@ -5344,7 +5345,6 @@ body.mob-safari .sidebar.sidebar-fixed {
 .btn {
   display: inline-block;
   color: #FFF !important;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-image: none !important;
   border: 5px solid #FFF;
   border-radius: 0;
@@ -5414,8 +5414,8 @@ button.btn:active {
 .btn-default,
 .btn:focus,
 .btn-default:focus {
-  background-color: #abbac3 !important;
-  border-color: #abbac3;
+  background-color: #f2f2f2 !important;
+/*  border-color: #f2f2f2;*/
 }
 .btn:hover,
 .btn-default:hover,
@@ -5423,9 +5423,9 @@ button.btn:active {
 .btn-default:active,
 .open > .btn.dropdown-toggle,
 .open > .btn-default.dropdown-toggle {
-  background-color: #8b9aa3 !important;
-  border-color: #abbac3;
-  opacity: .4;
+/*  background-color: #000 !important;
+  border-color: #000 !important;*/
+  opacity: .7;
 }
 .btn.no-border:hover,
 .btn-default.no-border:hover,
@@ -5439,6 +5439,11 @@ button.btn:active {
 .btn-default.no-hover:active {
   background-color: #abbac3 !important;
 }
+
+.btn:selected{
+    
+}
+
 .btn.active,
 .btn-default.active {
   background-color: #9baab3 !important;
