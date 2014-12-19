@@ -30,7 +30,7 @@ and open the template in the editor.
             <h2 id="cc_tech"> Technical details </h2>
             <ul>
                 <li>
-                    Communication between you and AstroPay should be made by POST. 
+                    Communication between Merchant and AstroPay should be made by POST.
                 </li>
                 <li>
                     The protocol used is purely HTTPS.
@@ -47,43 +47,38 @@ and open the template in the editor.
             <h2 id="cc_security"> Security details </h2>
             <ul>
                 <li>
-                    A username and password must be used in all communications.  
+                    Credentials must be used in all communications. 
                 </li>
                 <li>
-                    Both parties must use an HMAC-SHA-256 (RFC 2104) code to verify the 	integrity of the 
+                    Both parties must use an HMAC-SHA-256 (RFC 2104) code to verify the integrity of the information received from each side.	
                 </li>
                 <li>
-                    information received from each side. 	
+                    HMAC‐SHA‐256 code (32 bytes) is generated using a key provided by AstroPay. This code is converted to string as a hexadecimal representation of the code (64 upper chars).
                 </li>
                 <li>
-                    HMAC‐SHA‐256 code (32 bytes) is generated using a key provided by AstroPay. 
-                    This code is converted to string as a hexadecimal representation of the 	code (64 upper chars). 	
-                </li>
-                <li>
-                    All communications between you and AstroPay should be made exclusively through registered IPs on both sides. 
+                   All communications between Merchant and AstroPay should be made exclusively through registered IPs on both sides.
                 </li>
 
             </ul>
 
             <h1 id="cc_howtostart">How to start?</h1>
             <p>
-                Start creating your own account in our site <a>https://merchant.astropaycard.com/sign_up</a>. 
-                After you finished the register you will have access to your credentials, your account configuration and your backoffice at <a>https://www.merchant.astropaycard.com</a>.
+                Create your account in our site <a>https://merchant.astropaycard.com/sign_up</a>. After the registration is finished you will have access to your credentials, your account configuration and your backoffice at <a>https://www.merchant.astropaycard.com</a>.
             </p>
 
             <div class="alert alert-info color-cashout-card">
                 <strong>Remember: </strong>
 
-                register your server IP in the panel https://www.merchant.astropaycard.com in section Integration->Credentials & Settings
+                register your server IP in the panel <a>https://www.merchant.astropaycard.com</a> in section Integration->Credentials & Settings
                 <br>
             </div>
 
             <h1>Environments</h1>
             <p>
-                Your account is associated with two different environments: Sandbox and Live.
-                Sandbox is a test environment available for integration development and testing which simulates
-                most of the requests and transactions available in the platform. On test environment no transactions will actually be processed. </p>
-
+                Your account is associated with two different environments: Sandbox and Live. <br>
+                <b>Sandbox:</b> Test environment available for integration development and testing which simulates the requests and transactions available in the platform. On test environment no transactions will actually be processed.<br>
+                <b>Live:</b> Production environment.
+                
             <h2 id="cc_urls">URLs, credentials & account configuration</h2>
             <p>
                 Base URL for communication:
@@ -165,7 +160,7 @@ and open the template in the editor.
                     <tr>
                         <td>x_currency</td>
                         <td>String (length: 3 chars)</td>
-                        <td>Cashout currency</td>
+                        <td>Cashout currency code</td>
                         <td>EUR</td>
                         <td><span class="badge badge-danger background-color-cashout-card">2</span></i></td>
                     </tr>
@@ -200,21 +195,20 @@ and open the template in the editor.
             </p>
             <p>
             <span class="badge badge-danger background-color-cashout-card">3</span>
-                Control string: sha1($secret .$id . $x_email . number_format($x_amount,2) . $x_currency)
+                Control string
             </p>
-                                
+                        <ul>
+                            <li>
+                               $secret - Merchant's account secret key
                             </li>
                             <li>
-                               
+                               $x_amount - Cashout amount
                             </li>
                             <li>
-                                 
+                                $x_currency - Cashout currency code
                             </li>
                             <li>
-                                
-                            </li>
-                            <li>
-                               
+                               $x_email - User email address
                             </li>
                         </ul>    
             
@@ -228,8 +222,7 @@ and open the template in the editor.
 
                 <div class="widget-body">
                     <div class="widget-main">
-                        
-                        sha1($secret.$id_cashout.$x_email.number_format($x_amount,2).$x_currency)
+                        $control_string = sha1 ( $this->merchant->secret . number_format ( $this->params->x_amount, 2 ) . $this->params->x_currency . $this->params->x_email );
                     </div>
                 </div>
             </div>
@@ -368,7 +361,7 @@ and open the template in the editor.
 
                 <div class="widget-body">
                     <div class="widget-main">
-                        sha1($secret.$id_cashout.$x_email.number_format($x_amount,2).$x_currency)
+                        $control_string = sha1($secret.$id_cashout.$x_email.number_format($x_amount,2).$x_currency)
                     </div>
                 </div>
             </div>
