@@ -116,7 +116,7 @@ and open the template in the editor.
                 POST:
                 <br>
                 <i class="ace-icon fa fa-globe bigger-125 color-cashout-card"></i>
-                <a class="btn btn-link"> https://api.astropaycard.com/cashOut/sendCard</a>
+                <a href="#cc_urls">URL base</a> + /sendCard
             </p>
             <h2 id="cc_request"> Request </h2>
             <h3> Mandatory parameters </h3>
@@ -135,7 +135,7 @@ and open the template in the editor.
                 <tbody>
                     <tr>
                         <td>x_login</td>
-                        <td>String (length: 10 chars)</td>
+                        <td>String (length: 32 chars)</td>
                         <td>Your merchant ID in Astropay platform</td>
                         <td>AsGsd35Grf</td>
                         <td><span class="badge badge-danger background-color-cashout-card">1</span></td>
@@ -143,7 +143,7 @@ and open the template in the editor.
 
                     <tr>
                         <td>x_trans_key</td>
-                        <td>String (length: 10 chars)</td>
+                        <td>String (length: 32 chars)</td>
                         <td>Your merchant password in Astropay platform </td>
                         <td>D23weF2f4g</td>
                         <td><span class="badge badge-danger background-color-cashout-card">1</span></td>
@@ -175,9 +175,9 @@ and open the template in the editor.
 
                     <tr>
                         <td>x_control</td>
-                        <td>String (length: 3 chars)</td>
+                        <td>String (length: 40 chars)</td>
                         <td>Control string calculated by you</td>
-                        <td>EUR</td>
+                        <td>4s5d4r42R5gJU23F45HQ1ad45Qdg3f5rTqF63g45</td>
                         <td><span class="badge badge-danger background-color-cashout-card">3</span></td>
                     </tr>
 
@@ -245,7 +245,7 @@ and open the template in the editor.
                     <tr>
                         <td>x_window</td>
                         <td>Integer</td>
-                        <td>The time window after a transaction is taken as duplicated</td>
+                        <td>The time window in seconds after a transaction is taken as duplicated</td>
                         <td>60</td>
                         <td>10</td>
                         <td><span class="badge badge-danger background-color-cashout-card">1</span></td>
@@ -254,7 +254,7 @@ and open the template in the editor.
                     <tr>
                         <td> x_reference</td>
                         <td>String (length: 10 chars)</td>
-                        <td>Your internal cashout reference</td>
+                        <td>Merchant's internal cashout reference</td>
                         <td>cashout_123</td>
                         <td>-   </td>
                         <td></td>
@@ -265,7 +265,7 @@ and open the template in the editor.
             <p>
                 <span class="badge badge-danger background-color-cashout-card">1</span>
                         Transactions sent with same amount and same card information, within a time window of 10 seconds will be taken as duplicated.
-                        Batch transactions not recommended.
+                        Batch transactions not recommended, if needed set x_window = 0.
             </p>
             
             <h2 id="cc_response">Response</h2>
@@ -436,6 +436,9 @@ and open the template in the editor.
             </div>
 
             <h1 id="cc_currencies">Available currencies</h1>
+            <p>
+                Based on standard <a href='http://es.wikipedia.org/wiki/ISO_4217'>ISO 4217</a>
+            </p>
             <table id="simple-table" class="table table-striped table-bordered table-hover">
                  <tbody>
                      <tr>
@@ -673,6 +676,10 @@ and open the template in the editor.
                     <tr>
                         <td>401</td>
                         <td>Invalid merchant credentials or inactive account </td>
+                    </tr>
+                    <tr>
+                        <td>402</td>
+                        <td>Unregistered IP address </td>
                     </tr>
                     <tr>
                         <td>403</td>
