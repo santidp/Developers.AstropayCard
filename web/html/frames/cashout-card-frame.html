@@ -198,10 +198,41 @@ and open the template in the editor.
                 <span class="badge badge-danger background-color-cashout-card">2</span>
                 Available currencies
             </p>
-            <p>
-                <span class="badge badge-danger background-color-cashout-card">3</span>
-                Control string: sha1($secret .$id . $x_email . number_format($x_amount,2) . $x_currency)
-            </p>
+            <span class="badge badge-danger background-color-cashout-card">3</span>
+                Control string
+                <ul>
+                            <li>
+                                
+                            </li>
+                            <li>
+                               
+                            </li>
+                            <li>
+                                 
+                            </li>
+                            <li>
+                                
+                            </li>
+                            <li>
+                               
+                            </li>
+                        </ul>    
+            
+            <div class="widget-box">
+                <div class="widget-header widget-header-flat">
+                    <h4 class="smaller">
+                        <i class="ace-icon fa fa-code"></i>
+                        The control string is calculated, as follows:
+                    </h4>
+                </div>
+
+                <div class="widget-body">
+                    <div class="widget-main">
+                        
+                        sha1($secret.$id_cashout.$x_email.number_format($x_amount,2).$x_currency)
+                    </div>
+                </div>
+            </div>
 
             <h3> Optional parameters </h3>
 
@@ -274,7 +305,7 @@ and open the template in the editor.
                     </tr>
 
                     <tr>
-                        <td>id</td>
+                        <td>id_cashout</td>
                         <td>Astropay internal ID</td>
                          <td>"success" or <a>error message</a></td>
                     </tr>
@@ -291,27 +322,62 @@ and open the template in the editor.
 
                     <tr>
                         <td>email</td>
-                        <td>user email</td>
+                        <td>User email</td>
                         <td>Value sent in request</td>
                     </tr>
 
                     <tr>
                         <td>amount</td>
-                        <td>cachout amount</td>
+                        <td>Cashout amount</td>
                         <td>Value sent in request</td>
                     </tr>
                     <tr>
                         <td>currency</td>
-                        <td>cachout currency</td>
+                        <td>Cashout currency</td>
                         <td>Value sent in request</td>
                     </tr>
                     <tr>
-                        <td>signature</td>
-                        <td>*</td>
-                        <td>Value sent in request</td>
+                        <td>control</td>
+                        <td>Control signature</td>
+                        <td><span class="badge badge-danger background-color-cashout-card">1</span></td>
                     </tr>
                 </tbody>
             </table>
+            <span class="badge badge-danger background-color-cashout-card">1</span>
+                Control signature
+                <ul>
+                            <li>
+                                $secret - secret key of the account
+                            </li>
+                            <li>
+                                $id_cashout - identificator of cashout 
+                            </li>
+                            <li>
+                                $x_email - user email
+                            </li>
+                            <li>
+                                $x_amount - cashout amount
+                            </li>
+                            <li>
+                                $x_currency - cashout currency
+                            </li>
+                        </ul>    
+            
+            <div class="widget-box">
+                <div class="widget-header widget-header-flat">
+                    <h4 class="smaller">
+                        <i class="ace-icon fa fa-code"></i>
+                        The control signature is calculated, as follows:
+                    </h4>
+                </div>
+
+                <div class="widget-body">
+                    <div class="widget-main">
+                        sha1($secret.$id_cashout.$x_email.number_format($x_amount,2).$x_currency)
+                    </div>
+                </div>
+            </div>
+                
 
             <div class="alert alert-info color-cashout-card">
                 <strong>Notes: </strong>
