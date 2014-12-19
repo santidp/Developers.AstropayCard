@@ -40,7 +40,6 @@
         <script src="../assets/js/respond.js"></script>
         <![endif]-->
 
-
         <link rel="stylesheet" href="../css/index.css" />
     </head>
 
@@ -232,27 +231,19 @@
                 </ul> /.nav-list -->
                 
                 <!--Cashout Cards menu-->
-                <ul class="nav nav-list" id="cashout-cards-menu">
-                    <li class="active">
-                        <a>
-                            <i class="menu-icon fa fa-credit-card"></i>
-                            <span class="menu-text"> Cashout Cards </span>
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                     <li class="">
+                <ul class="nav nav-list active" id="cashout-cards-menu">
+                     <li class="go" data-div="cc_introduction">
                         <a href="#" class="dropdown-toggle">
-                            <i class="menu-icon fa fa-list"></i>
+                            <i class=""></i>
                             <span class="menu-text">
                                 Introduction
                             </span>
                         </a>
                     </li>
                     
-                   <li class="">
+                   <li class="" data-div="cc_considerations">
                         <a href="#" class="dropdown-toggle">
-                            <i class="menu-icon fa fa-list"></i>
+                            <i class=""></i>
                             <span class="menu-text"> Considerations </span>
 
                             <b class="arrow fa fa-angle-down"></b>
@@ -261,15 +252,15 @@
                         <b class="arrow"></b>
 
                         <ul class="submenu">
-                            <li class="">
-                                <a href="tables.html">
+                            <li class="go" data-div="cc_tech">
+                                <a href="#" >
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Technical details
                                 </a>
                             </li>
 
-                            <li class="">
-                                <a href="jqgrid.html">
+                            <li class="go" data-div="cc_security">
+                                <a href="#" >
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Security details
                                 </a>
@@ -279,9 +270,9 @@
                         </ul>
                     </li>
 
-                     <li class="">
+                     <li class="go" data-div="cc_howtostart">
                         <a href="#" class="dropdown-toggle">
-                            <i class="menu-icon fa fa-list"></i>
+                            <i class=""></i>
                             <span class="menu-text">
                                 How to start?
                             </span>
@@ -290,17 +281,16 @@
                     
                     <li class="">
                         <a href="#" class="dropdown-toggle">
-                            <i class="menu-icon fa fa-list"></i>
+                            <i class=""></i>
                             <span class="menu-text"> Environments </span>
-
                             <b class="arrow fa fa-angle-down"></b>
                         </a>
 
                         <b class="arrow"></b>
 
                         <ul class="submenu">
-                            <li class="">
-                                <a href="tables.html">
+                            <li class="go" data-div="cc_urls">
+                                <a href="#">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     URLs, credentials & configuration
                                 </a>
@@ -308,31 +298,10 @@
                         </ul>
                     </li>
                     
-                    
-                    <li class="">
+                   
+                    <li class="" id="cc_sendcard">
                         <a href="#" class="dropdown-toggle">
-                            <i class="menu-icon fa fa-list"></i>
-                            <span class="menu-text"> Environments </span>
-
-                            <b class="arrow fa fa-angle-down"></b>
-                        </a>
-
-                        <b class="arrow"></b>
-
-                        <ul class="submenu">
-                            <li class="">
-                                <a href="tables.html">
-                                    <i class="menu-icon fa fa-caret-right"></i>
-                                    URLs, credentials & account configuration
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    
-                    
-                    <li class="">
-                        <a href="#" class="dropdown-toggle">
-                            <i class="menu-icon fa fa-list"></i>
+                            <i class=""></i>
                             <span class="menu-text"> Function: sendCard </span>
 
                             <b class="arrow fa fa-angle-down"></b>
@@ -341,15 +310,15 @@
                         <b class="arrow"></b>
 
                         <ul class="submenu">
-                            <li class="">
-                                <a href="tables.html">
+                            <li class="go" data-div="cc_request">
+                                <a href="#" >
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Request
                                 </a>
                             </li>
 
-                            <li class="">
-                                <a href="jqgrid.html">
+                            <li class="go" data-div="cc_response">
+                                <a href="#" >
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Response
                                 </a>
@@ -358,9 +327,10 @@
                             </li>
                         </ul>
                     </li>
+                    
                     <li class="">
                         <a href="#" class="dropdown-toggle">
-                            <i class="menu-icon fa fa-list"></i>
+                            <i class=""></i>
                             <span class="menu-text"> Errors </span>
 
                             <b class="arrow fa fa-angle-down"></b>
@@ -369,15 +339,15 @@
                         <b class="arrow"></b>
 
                         <ul class="submenu">
-                            <li class="">
-                                <a href="tables.html">
+                            <li class="go" data-div="cc_references">
+                                <a href="#">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     References
                                 </a>
                             </li>
 
-                            <li class="">
-                                <a href="jqgrid.html">
+                            <li class="go" data-div="cc_codes">
+                                <a href="#">
                                     <i class="menu-icon fa fa-caret-right"></i>
                                     Codes
                                 </a>
@@ -387,9 +357,9 @@
                         </ul>
                     </li>
                     
-                      <li class="">
+                      <li class="go" data-div="cc_testing">
                         <a href="#" class="dropdown-toggle">
-                            <i class="menu-icon fa fa-list"></i>
+                            <i class=""></i>
                             <span class="menu-text"> Testing on Sandbox </span>
                         </a>
                     </li>
@@ -748,6 +718,6 @@ window.jQuery || document.write("<script src='../assets/js/jquery1x.js'>"+"<"+"/
         
         <!--AstroPay scripts-->
         <script src="../js/navigation.js"></script>
-        
+        <script src="../js/cashout_card_menu.js"></script>
     </body>
 </html>

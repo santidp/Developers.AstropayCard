@@ -49,13 +49,13 @@ function navigateCashoutCards() {
 }
 
 function hideAll() {
-    $("#apd-streamline-menu").css("display", "none");
-    $("#apd-classic-menu").css("display", "none");
-    $("#one-shot-menu").css("display", "none");
-    $("#pre-approval-menu").css("display", "none");
+   // $("#apd-streamline-menu").css("display", "none");
+    //$("#apd-classic-menu").css("display", "none");
+    //$("#one-shot-menu").css("display", "none");
+    //$("#pre-approval-menu").css("display", "none");
     $("#apc-menu").css("display", "none");
-    $("#rounders-menu").css("display", "none");
-    $("#cashout-cash-menu").css("display", "none");
+    //$("#rounders-menu").css("display", "none");
+    //$("#cashout-cash-menu").css("display", "none");
     $("#cashout-cards-menu").css("display", "none");
 }
 

@@ -18,16 +18,16 @@ and open the template in the editor.
                 </h1>
             </div><!-- /.page-header -->
 
-            <h1>Introduction</h1>
+            <h1 id="cc_introduction">Introduction</h1>
             <p>
                 Merchant will be able to create an AstroPay Card with the choosen value. 
                 The cost of the card plus a fee will be deducted from merchans account. <br>
                 Once a new Cashout Card is requested, the new card will be issued and sent to customer's email.
             </p>
 
-            <h1>Considerations</h1>
+            <h1 id="cc_considerations">Considerations</h1>
 
-            <h2> Technical details </h2>
+            <h2 id="cc_tech"> Technical details </h2>
             <ul>
                 <li>
                     Communication between you and AstroPay should be made by POST. 
@@ -44,7 +44,7 @@ and open the template in the editor.
 
             </ul>
 
-            <h2> Security details </h2>
+            <h2 id="cc_security"> Security details </h2>
             <ul>
                 <li>
                     A username and password must be used in all communications.  
@@ -65,7 +65,7 @@ and open the template in the editor.
 
             </ul>
 
-            <h1>How to start?</h1>
+            <h1 id="cc_howtostart">How to start?</h1>
             <p>
                 Start creating your own account in our site <a>https://merchant.astropaycard.com/sign_up</a>. 
                 After you finished the register you will have access to your credentials, your account configuration and your backoffice at <a>https://www.merchant.astropaycard.com</a>.
@@ -84,7 +84,7 @@ and open the template in the editor.
                 Sandbox is a test environment available for integration development and testing which simulates
                 most of the requests and transactions available in the platform. On test environment no transactions will actually be processed. </p>
 
-            <h2>URLs, credentials & account configuration</h2>
+            <h2 id="cc_urls">URLs, credentials & account configuration</h2>
             <p>
                 Base URL for communication:
             </p>
@@ -123,7 +123,7 @@ and open the template in the editor.
                 <i class="ace-icon fa fa-globe bigger-125 color-cashout-card"></i>
                 <a class="btn btn-link"> https://api.astropaycard.com/cashOut/sendCard</a>
             </p>
-            <h2> Request </h2>
+            <h2 id="cc_request"> Request </h2>
             <h3> Mandatory parameters </h3>
 
             <table id="simple-table" class="table table-striped table-bordered table-hover">
@@ -244,7 +244,7 @@ and open the template in the editor.
                         So, we don’t recommend doing batch transactions.
             </p>
             
-            <h2>Response</h2>
+            <h2 id="cc_response">Response</h2>
             <div id="response"></div>
             <table id="simple-table" class="table table-striped table-bordered table-hover">
                 <thead>
@@ -383,7 +383,7 @@ and open the template in the editor.
 
             <h1>Errors</h1>
             
-            <h2>References</h2>
+            <h2 id="cc_references">References</h2>
 
             <table id="simple-table" class="table table-striped table-bordered table-hover">
                 <thead>
@@ -417,7 +417,7 @@ and open the template in the editor.
                 </tbody>
             </table>
 
-            <h2>Codes</h2>
+            <h2 id="cc_codes">Codes</h2>
             <table id="simple-table" class="table table-striped table-bordered table-hover">
                 <thead>
                     <tr>
@@ -475,7 +475,7 @@ and open the template in the editor.
             </table>
 
 
-            <h1>Testing on Sandbox</h1>
+            <h1 id="cc_testing">Testing on Sandbox</h1>
             <p>
                 For testing error responses, in sandbox environment send the following email to function Send Card:
             </p>
