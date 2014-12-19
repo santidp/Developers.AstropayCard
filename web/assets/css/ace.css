@@ -2378,10 +2378,10 @@ body.mob-safari .sidebar.sidebar-fixed {
 
 .sidebar .sidebar-shortcuts-large > .btn {
   text-align: center;
-  width: 47%;
-  line-height: 24px;
-  padding: 0;
-  border-width: 4px;
+width: 47%;
+line-height: 28px;
+padding: 0;
+border-width: 0px;
 }
 .sidebar .sidebar-shortcuts-large > .btn > .ace-icon {
   margin: 0;
