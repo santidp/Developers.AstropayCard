@@ -198,10 +198,10 @@ and open the template in the editor.
                 <span class="badge badge-danger background-color-cashout-card">2</span>
                 See <a href="#cc_currencies">available currencies</a>
             </p>
+            <p>
             <span class="badge badge-danger background-color-cashout-card">3</span>
-                Control string
-                <ul>
-                            <li>
+                Control string: sha1($secret .$id . $x_email . number_format($x_amount,2) . $x_currency)
+            </p>
                                 
                             </li>
                             <li>
