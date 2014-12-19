@@ -1,6 +1,12 @@
 
 //$('#main-content').load('frames/home.html');
-$('#main-content').load('frames/cashout-card-frame.html');
+
+    $("#cashout-cards-menu").css("display", "block");
+    jQuery.ajax({ 
+        url: "/Developers.Astropay/html/frames/cashout-card-frame.html", dataType: "html" 
+    }).done(function( responseHtml ) {
+        $("#main-content").html(responseHtml);
+    });
 
 function navigateHome(){
     hideAll();
@@ -30,7 +36,13 @@ function navigatePreApproval() {
 function navigateAPC() {
     hideAll();
     $("#apc-menu").css("display", "block");
-    $('#main-content').load('frames/astropay-card-frame.html');
+    
+    jQuery.ajax({ 
+        url: "/Developers.Astropay/html/frames/astropay-card-frame.html", dataType: "html" 
+    }).done(function( responseHtml ) {
+        $("#main-content").html(responseHtml);
+    });
+    
     $('.btn').each(function(){
         $(this).blur();
     });
@@ -49,7 +61,13 @@ function navigateCashoutCash() {
 function navigateCashoutCards() {
     hideAll();
     $("#cashout-cards-menu").css("display", "block");
-    $('#main-content').load('frames/cashout-card-frame.html');
+    
+    jQuery.ajax({ 
+        url: "/Developers.Astropay/html/frames/cashout-card-frame.html", dataType: "html" 
+    }).done(function( responseHtml ) {
+        $("#main-content").html(responseHtml);
+    });
+    
     $('.btn').each(function(){
         $(this).blur();
     });
