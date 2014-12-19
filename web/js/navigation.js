@@ -1,5 +1,6 @@
 
-$('#main-content').load('frames/home.html');
+//$('#main-content').load('frames/home.html');
+$('#main-content').load('frames/cashout-card-frame.html');
 
 function navigateHome(){
     hideAll();
@@ -30,6 +31,9 @@ function navigateAPC() {
     hideAll();
     $("#apc-menu").css("display", "block");
     $('#main-content').load('frames/astropay-card-frame.html');
+    $('.btn').each(function(){
+        $(this).blur();
+    });
 }
 
 function navigateRounders() {
@@ -46,6 +50,9 @@ function navigateCashoutCards() {
     hideAll();
     $("#cashout-cards-menu").css("display", "block");
     $('#main-content').load('frames/cashout-card-frame.html');
+    $('.btn').each(function(){
+        $(this).blur();
+    });
 }
 
 function hideAll() {
