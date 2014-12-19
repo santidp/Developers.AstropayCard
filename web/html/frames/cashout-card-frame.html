@@ -104,18 +104,18 @@ and open the template in the editor.
             <div class="alert alert-info  color-cashout-card">
                 <strong>Note: </strong>
 
-                You will find your credentials in the panel, section Integration -> Credentials & Settings. It is important to notice that your credentials are different between both environments.
+                You will find your credentials in the panel: "Integration -> Credentials & Settings". Notice that credentials are different between both environments.
                 <br>
             </div>
             <div class="alert alert-info color-cashout-card">
                 <strong>Note: </strong>
-                After finishing your integration and tests, you should fill your account details in the panel Settings -> Merchant Account and Ask to go live. In that moment, your live credentials will be available under the Live tab.  
+                Once the integration is finished and tested, fill your account details in the panel: "Settings -> Merchant Account" and <b>"Request to go live"</b>. Your live credentials will be available when Merchant's account is in Live mode.  
                 <br>
             </div>
 
             <h1>Function: sendCard</h1>
             <p>
-                This function is used to create a Cashout Card.
+                This function is used to generate a Cashout Card.
             </p>
             <p>
                 POST:
@@ -243,7 +243,7 @@ and open the template in the editor.
                         <th>Format</th>
                         <th>Description</th>
                         <th>Example </th>
-                        <th></th>
+                        <th>Default</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -271,8 +271,8 @@ and open the template in the editor.
 
             <p>
                 <span class="badge badge-danger background-color-cashout-card">1</span>
-                        Transactions sent with same amount and card information, will be taken as duplicated transactions within a time window of 10 seconds.
-                        So, we don’t recommend doing batch transactions.
+                        Transactions sent with same amount and same card information, within a time window of 10 seconds will be taken as duplicated.
+                        Batch transactions not recommended.
             </p>
             
             <h2 id="cc_response">Response</h2>
@@ -308,11 +308,6 @@ and open the template in the editor.
                         <td>id_cashout</td>
                         <td>Astropay internal ID</td>
                          <td>"success" or <a>error message</a></td>
-                    </tr>
-                    <tr>
-                        <td>code</td>
-                        <td>Response code</td>
-                        <td>"success" or <a>error message</a></td>
                     </tr>
                     <tr>
                         <td>auth_code</td>
@@ -383,13 +378,13 @@ and open the template in the editor.
                 <strong>Notes: </strong>
                 <ul>
                     <li>
-                        Once this method is invoked, the cashout amount is automatically discounted from your balance.
+                        Once this method is invoked, the cashout amount is automatically discounted from Merchant's balance.
                     </li>
                     <li>
-                        It is your responsibility to send us the correct destination email address. We suggest asking for a confirmation after the user enter his email address.
+                        It is Merchant's responsibility to send the correct destination email address. We suggest asking for a confirmation after the user enters the email address.
                     </li>
                     <li>
-                        All cards are generated in USD (dollar). If you send a different currency we will convert the amount to USD.
+                        All cards are generated in USD (dollar). If a different currency is sent amount will be converted to USD.
                     </li>
                 </ul>
             </div>
@@ -543,7 +538,7 @@ and open the template in the editor.
 
             <h1 id="cc_testing">Testing on Sandbox</h1>
             <p>
-                For testing error responses, in sandbox environment send the following email to function Send Card:
+                For testing error responses, send in parameter x_email the following values to function Send Card:
             </p>
 
             <table id="simple-table" class="table table-striped table-bordered table-hover">
