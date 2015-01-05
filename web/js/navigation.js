@@ -3,7 +3,7 @@
 
     $("#cashout-cards-menu").css("display", "block");
     jQuery.ajax({ 
-        url: "/Developers.AstropayCard/html/frames/api-explorer-frame.html", dataType: "html" 
+        url: "/Developers.AstropayCard/html/frames/home.html", dataType: "html" 
     }).done(function( responseHtml ) {
         $("#main-content").html(responseHtml);
     });
