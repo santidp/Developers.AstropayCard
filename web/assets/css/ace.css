@@ -19117,7 +19117,7 @@ input.typeahead.scrollable ~ .tt-dropdown-menu {
   color: #1963aa;
 }
 .no-skin .nav-list > li.active > a {
-  font-weight: bold;
+  font-weight: normal;
   color: #2b7dbc;
 }
 .no-skin .nav-list > li.active > a,
