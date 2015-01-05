@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1 id="cc_considerations" class="header block lighter color-cashout-card blue">Considerations</h1>
+
+        <h2 id="cc_tech" class=" block lighter"> Technical details </h2>
+        <ul>
+            <li>
+                Communication between Merchant and AstroPay should be made by POST.
+            </li>
+            <li>
+                The protocol used is purely HTTPS.
+            </li>
+            <li>
+                Sensible information is sent server to server. 	
+            </li>
+            <li>
+                The return format of the functions is json. 
+            </li>
+
+        </ul>
+
+        <h2 id="cc_security" class=" block lighter"> Security details </h2>
+        <ul>
+            <li>
+                Credentials must be used in all communications. 
+            </li>
+            <li>
+                Both parties must use an HMAC-SHA-256 (RFC 2104) code to verify the integrity of the information received from each side.	
+            </li>
+            <li>
+                HMAC‐SHA‐256 code (32 bytes) is generated using a key provided by AstroPay. This code is converted to string as a hexadecimal representation of the code (64 upper chars).
+            </li>
+            <li>
+                All communications between Merchant and AstroPay should be made exclusively through registered IPs on both sides.
+            </li>
+            
+        </ul>
+
+        <h1 id="cc_howtostart" class="header block lighter color-cashout-card blue">How to start?</h1>
+        <p>
+            Create your account in our site <a>https://merchant.astropaycard.com/sign_up</a>. After the registration is finished you will have access to your credentials, your account configuration and your backoffice at <a>https://www.merchant.astropaycard.com</a>.
+        </p>
+
+        <div class="well">
+            <h4 class="orange smaller lighter"><i class="ace-icon fa fa-bell"></i> Remember</h4>
+            Register your server IP in the panel https://www.merchant.astropaycard.com in section "Integration->Credentials & Settings"
+        </div>
+
+        <h1 class="header block lighter color-cashout-card blue">Environments</h1>
+        <p>
+            Your account is associated with two different environments: Sandbox and Live. <br>
+        <h2 id="cc_urls">URLs, credentials & account configuration</h2>
+        <p>
+            Base URL for communication:
+        </p>
+
+        <h3 class="block lighter">Sandbox</h3>
+        Test environment available for integration development and testing which simulates the requests and transactions available in the platform. On test environment no transactions will actually be processed.
+        <p>                
+            <i class="ace-icon fa fa-globe bigger-125 color-cashout-card"></i>
+            <a  class="btn btn-link"> https://sandbox-api.astropaycard.com</a>
+        </p>
+
+        <h3 class="block lighter">Live</h3>
+        Production environment
+        <p>
+            <i class="ace-icon fa fa-globe bigger-125 color-cashout-card"></i>
+            <a class="btn btn-link"> https://api.astropaycard.com</a>
+        </p>
+
+        <div class="well">
+            <h4 class="red smaller lighter"><i class="ace-icon fa fa-pencil"></i> Note</h4>
+
+            You will find your credentials in the panel: "Integration -> Credentials & Settings". Notice that credentials are different between both environments.
+            <br>
+        </div>
+        <div class="well">
+            <h4 class="red smaller lighter"><i class="ace-icon fa fa-pencil"></i> Note</h4>
+            Once the integration is finished and tested, fill your account details in the panel: "Settings -> Merchant Account" and <b>"Request to go live"</b>. Your live credentials will be available when Merchant's account is in Live mode.  
+            <br>
+        </div>
+    </body>
+</html>
