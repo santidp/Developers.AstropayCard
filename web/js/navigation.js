@@ -4,7 +4,11 @@ navigateAPC();
 
 function navigateHome() {
     hideAll();
-    $('#main-content').load('frames/home.html');
+    jQuery.ajax({
+        url: "/Developers.AstropayCard/html/frames/home.html", dataType: "html"
+    }).done(function (responseHtml) {
+        $("#main-content").html(responseHtml);
+    });
 }
 
 function navigateAPC() {
@@ -15,8 +19,8 @@ function navigateAPC() {
         url: "/Developers.AstropayCard/html/frames/astropay-card-frame.html", dataType: "html"
     }).done(function (responseHtml) {
         $("#main-content").html(responseHtml);
-        
-         jQuery.ajax({
+
+        jQuery.ajax({
             url: "/Developers.AstropayCard/html/frames/common/considerations.html", dataType: "html"
         }).done(function (responseHtml) {
             $("#considerations-container").html(responseHtml);
@@ -36,7 +40,7 @@ function navigateCashoutCards() {
         url: "/Developers.AstropayCard/html/frames/cashout-card-frame.html", dataType: "html"
     }).done(function (responseHtml) {
         $("#main-content").html(responseHtml);
-        
+
         jQuery.ajax({
             url: "/Developers.AstropayCard/html/frames/common/considerations.html", dataType: "html"
         }).done(function (responseHtml) {

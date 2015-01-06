@@ -13160,9 +13160,6 @@ li.item-default {
 }
 .profile-user-info {
   display: table;
-  width: 98%;
-  width: calc(100% - 24px);
-  margin: 0 auto;
 }
 .profile-info-row {
   display: table-row;
