@@ -27,10 +27,9 @@ and open the template in the editor.
 
         </p>
         <p>
-            AstroPay Card can be purchased in the 10 countries where AstroPay has operations. It
-            can be paid through cash in thousands of payment stores, in can be paid through
-            Boleto in Brazil, through Paysafecard in Argentina, bank transfer in the entire region,
-            debit card and many more.
+            AstroPay Card can be purchased in 10 countries where AstroPay has operations. It
+            can be paid through cash payment stores, boleto in Brazil, e-wallets, online bank transfer,
+            debit and credit card and many more.
         </p>
         <p>
             It is also instant, no need to wait. Simply purchase your card and you will immediately
@@ -43,10 +42,8 @@ and open the template in the editor.
 
         </div>
 
-
-
         <!--/verif/validator-->
-        <div>
+        <div id="cc_validator_request">
             <h1 class="header block lighter color-apc blue">
                 Function: /verif/validator
             </h1>
@@ -544,7 +541,7 @@ and open the template in the editor.
                 $control = md5($x_login . $transaction_id . $amount);
             </p>
 
-            <h2>
+            <h2 id="cc_validator_example">
                 Example
             </h2>
             <div class="widget-box">
@@ -596,7 +593,7 @@ and open the template in the editor.
         <!--/verif/validator-->
 
         <!--/verif/transtatus-->
-        <div>
+        <div id="cc_transtatus_request">
             <h1 class="header block lighter color-apc blue">
                 /verif/transtatus
             </h1>
@@ -833,7 +830,7 @@ and open the template in the editor.
             <p>The control string is calculated:
                 $control = md5($x_login . $transaction_id . $amount);
             </p>
-            <h2>
+            <h2 id="cc_transtatus_example">
                 Example
             </h2>
 
@@ -878,7 +875,6 @@ and open the template in the editor.
         </div>
         <!--/verif/transtatus-->
 
-        
         <!-- SDK -->
         <div>
             <h1 class="header block lighter color-apc blue">
@@ -890,10 +886,10 @@ and open the template in the editor.
             <p>The SDK provided by AstroPay contains:</p>
             <ul>
                 <li>
-                    <a href="">AstroPayCard.class.php</a> (AstroPay Card class)
+                    <a href="/Developers.AstropayCard/html/docs/libs/AstroPayCard.class.php" download>AstroPayCard.class.php</a> (AstroPay Card class)
                 </li>
                 <li>
-                    <a href="">Sample.php</a>
+                    <a href="/Developers.AstropayCard/html/docs/libs/Sample.php" download>Sample.php</a>
                 </li>
             </ul>
 
@@ -919,7 +915,7 @@ and open the template in the editor.
                 </li>
             </ul>
 
-            <h2 class="lighter color-apc"> auth_transaction, capture_transaction & auth_capture_transaction</h2>
+            <h2 class="lighter color-apc" id="cc_auth_transaction"> auth_transaction, capture_transaction & auth_capture_transaction</h2>
             Params:
             <div class="profile-user-info profile-user-info-striped">
                 <div class="profile-info-row">
@@ -1001,7 +997,7 @@ and open the template in the editor.
                 <a href="#"> see /verif/validator response </a>
             </div>
 
-            <h2 class="lighter color-apc"> check_transaction_status</h2>
+            <h2 class="lighter color-apc" id="cc_check_transaction_status"> check_transaction_status</h2>
             Params:
             <div class="profile-user-info profile-user-info-striped">
                 <div class="profile-info-row">
@@ -1033,14 +1029,10 @@ and open the template in the editor.
             <h3 class="lighter color-apc">
                 Response 
             </h3>
-            <div class="go" data-div="cc_transtatus_response">
-                <a href="#"> see /verif/transtatus response </a>
-            </div>
+            <a href="#cc_transtatus_response"> see /verif/transtatus response </a>
 
 
-
-
-            <h2 class="lighter color-apc"> refund_transaction & void_transaction </h2>
+            <h2 class="lighter color-apc" id="cc_refund_transaction"> refund_transaction & void_transaction </h2>
             Params:
             <div class="profile-user-info profile-user-info-striped">
                 <div class="profile-info-row">
@@ -1109,15 +1101,28 @@ and open the template in the editor.
             <h3 class="lighter color-apc">
                 Response 
             </h3>
-            <div class="go" data-div="cc_validator_response">
-                <a href="#"> see /verif/validator response </a>
-            </div>
+            <a href="#cc_validator_response"> see /verif/validator response </a>
 
+            <h2 class="lighter color-apc" id="cc_download_sdk">Download SDK also for:</h2>
+            <ul>
+                <li>
+                    <a href="/Developers.AstropayCard/html/docs/libs/AstroPay_php_Examples.zip" download>Php</a>
+                </li>
+                <li>
+                    <a href="/Developers.AstropayCard/html/docs/libs/AstroPay_java_Examples.zip" download>Java</a>
+                </li>
+                <li>
+                    <a href="/Developers.AstropayCard/html/docs/libs/AstroPay_csharp_Examples.zip" download>C#</a>
+                </li>
+                <li>
+                    <a href="/Developers.AstropayCard/html/docs/libs/ruby_integration_classes.zip" download>Ruby</a>
+                </li>
+            </ul>
         </div>
         <!-- SDK -->
         
         <!-- Test data -->
-        <div>
+        <div id="cc_test_data">
         <h2>Test data</h2>
         <div class="col-xs-6 col-sm-3 pricing-box">
             <div class="widget-box color-apc">

@@ -100,37 +100,10 @@
                 </script>
 
                 <div class="sidebar-shortcuts" id="sidebar-shortcuts">
-<!--                    <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
-                        <button class="btn color-apd-streamline" onclick="navigateAPDStreamline()">
-                            APD streamline
-                        </button>
-
-                        <button class="btn color-apd-classic" onclick="navigateAPDClassic()">
-                            APD classic
-                        </button>
-
-                        <button class="btn color-one-shot" onclick="navigateOneShot()">
-                            One shot
-                        </button>
-
-                        <button class="btn color-pre-approval" onclick="navigatePreApproval()">
-                            Pre-approval
-                        </button>
-
-                    </div>-->
-
                     <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
                         <button class="btn background-color-apc" onclick="navigateAPC()">
                             Cards
                         </button>
-
-                        <!--<button class="btn color-rounders" onclick="navigateRounders()">
-                            Rounders
-                        </button>
-
-                        <button class="btn color-cashout-cash" onclick="navigateCashoutCash()">
-                            Cashout cash
-                        </button>-->
 
                         <button class="btn background-color-cashout-card" onclick="navigateCashoutCards()">
                             Cashouts
@@ -138,97 +111,218 @@
 
                     </div>
                 </div><!-- /.sidebar-shortcuts -->
-
-<!--                APD Streamline menu
-                <ul class="nav nav-list" id="apd-streamline-menu">
-                    <li class="active">
-                        <a href="index.html">
-                            <i class="menu-icon fa fa-money"></i>
-                            <span class="menu-text"> APD Streamline </span>
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-                </ul> /.nav-list 
-                
-                APD Classic menu
-                <ul class="nav nav-list" id="apd-classic-menu">
-                    <li class="active">
-                        <a href="index.html">
-                            <i class="menu-icon fa fa-money"></i>
-                            <span class="menu-text"> APD Classic </span>
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="">
+ 
+                <!--APC menu-->
+                <ul class="nav nav-list" id="apc-menu">                    
+                       <li class="" data-div="cc_considerations">
                         <a href="#" class="dropdown-toggle">
-                            <i class="menu-icon fa fa-desktop"></i>
-                            <span class="menu-text">
-                                Integration guide
-                            </span>
+                            <i class=""></i>
+                            <span class="menu-text"> Considerations </span>
 
                             <b class="arrow fa fa-angle-down"></b>
                         </a>
 
                         <b class="arrow"></b>
+
+                        <ul class="submenu">
+                            <li class="go" data-div="cc_tech">
+                                <a href="#" >
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Technical details
+                                </a>
+                            </li>
+
+                            <li class="go" data-div="cc_security">
+                                <a href="#" >
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Security details
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
                     </li>
-                </ul> /.nav-list 
-                
-                One Shot menu
-                <ul class="nav nav-list" id="one-shot-menu">
-                    <li class="active">
-                        <a href="index.html">
-                            <i class="menu-icon fa fa-credit-card"></i>
-                            <span class="menu-text"> One Shot </span>
+
+                     <li class="go" data-div="cc_howtostart">
+                        <a href="#" class="dropdown-toggle">
+                            <i class=""></i>
+                            <span class="menu-text">
+                                How to start?
+                            </span>
                         </a>
-                        <b class="arrow"></b>
                     </li>
-                </ul> /.nav-list 
-                
-                Pre Approval menu
-                <ul class="nav nav-list" id="pre-approval-menu">
-                    <li class="active">
-                        <a href="index.html">
-                            <i class="menu-icon fa fa-credit-card"></i>
-                            <span class="menu-text"> Pre Approval </span>
+                    
+                    <li class="">
+                        <a href="#" class="dropdown-toggle">
+                            <i class=""></i>
+                            <span class="menu-text"> Environments </span>
+                            <b class="arrow fa fa-angle-down"></b>
                         </a>
+
                         <b class="arrow"></b>
+
+                        <ul class="submenu">
+                            <li class="go" data-div="cc_urls">
+                                <a href="#">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    URLs, credentials & configuration
+                                </a>
+                            </li>
+                        </ul>
                     </li>
-                </ul> /.nav-list -->
-                
-                <!--APC menu-->
-                <ul class="nav nav-list" id="apc-menu">
-                    <li class="active">
-                        <a>
-                            <i class="menu-icon fa fa-credit-card"></i>
-                            <span class="menu-text"> AstroPay Card </span>
+                    
+                    <li class="" id="cc_validator">
+                        <a href="#" class="dropdown-toggle">
+                            <i class=""></i>
+                            <span class="menu-text"> Function: validator </span>
+
+                            <b class="arrow fa fa-angle-down"></b>
                         </a>
+
                         <b class="arrow"></b>
+
+                        <ul class="submenu">
+                            <li class="go" data-div="cc_validator_request">
+                                <a href="#" >
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Request
+                                </a>
+                            </li>
+
+                            <li class="go" data-div="cc_validator_response">
+                                <a href="#" >
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Response
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                             <li class="go" data-div="cc_validator_example">
+                                <a href="#" >
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Example
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                     <li class="" id="cc_validator">
+                        <a href="#" class="dropdown-toggle">
+                            <i class=""></i>
+                            <span class="menu-text"> Function: transtatus </span>
+
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+
+                        <b class="arrow"></b>
+
+                        <ul class="submenu">
+                            <li class="go" data-div="cc_transtatus_request">
+                                <a href="#" >
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Request
+                                </a>
+                            </li>
+
+                            <li class="go" data-div="cc_transtatus_response">
+                                <a href="#" >
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Response
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                             <li class="go" data-div="cc_transtatus_example">
+                                <a href="#" >
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Example
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="" id="cc_validator">
+                        <a href="#" class="dropdown-toggle">
+                            <i class=""></i>
+                            <span class="menu-text"> SDK </span>
+
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+
+                        <b class="arrow"></b>
+
+                        <ul class="submenu">
+                            <li class="go" data-div="cc_auth_transaction">
+                                <a href="#" >
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    auth_transaction
+                                </a>
+                            </li>
+
+                            <li class="go" data-div="cc_auth_transaction">
+                                <a href="#" >
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    capture_transaction
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                             <li class="go" data-div="cc_auth_transaction">
+                                <a href="#" >
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    auth_capture_transaction
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                             <li class="go" data-div="cc_check_transaction_status">
+                                <a href="#" >
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    check_transaction_status
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                             <li class="go" data-div="cc_refund_transaction">
+                                <a href="#" >
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    refund_transaction
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                             <li class="go" data-div="cc_refund_transaction">
+                                <a href="#" >
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    void_transaction
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                             <li class="go" data-div="cc_download_sdk">
+                                <a href="#" >
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Downloads
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="go" data-div="cc_test_data">
+                        <a href="#" class="dropdown-toggle">
+                            <i class=""></i>
+                            <span class="menu-text">
+                                Test data
+                            </span>
+                        </a>
                     </li>
                 </ul><!-- /.nav-list -->
 
-<!--               Rounders menu
-                <ul class="nav nav-list" id="rounders-menu">
-                    <li class="active">
-                        <a href="index.html">
-                            <i class="menu-icon fa fa-credit-card"></i>
-                            <span class="menu-text"> Rounders </span>
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-                </ul> /.nav-list 
-                
-                Cashout cash menu
-                <ul class="nav nav-list" id="cashout-cash-menu">
-                    <li class="active">
-                        <a href="index.html">
-                            <i class="menu-icon fa fa-credit-card"></i>
-                            <span class="menu-text"> Cashout Cash </span>
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-                </ul> /.nav-list -->
                 
                 <!--Cashout Cards menu-->
                 <ul class="nav nav-list active" id="cashout-cards-menu">
@@ -298,7 +392,6 @@
                         </ul>
                     </li>
                     
-                   
                     <li class="" id="cc_sendcard">
                         <a href="#" class="dropdown-toggle">
                             <i class=""></i>
