@@ -113,7 +113,7 @@ and open the template in the editor.
                     </tr>
                     <tr>
                         <td>x_type</td>
-                        <td>“AUTH_ONLY”, “CAPTURE_ONLY”, “AUTH_CAPTURE”, “CREDIT”, “REFUND”, “VOID”</td>
+                        <td>“AUTH_ONLY”, “CAPTURE_ONLY”, “AUTH_CAPTURE”, “REFUND”, “VOID”</td>
                         <td>The transaction type</td>
                         <td>AUTH_CAPTURE</td>
                         <td></td>
@@ -228,7 +228,7 @@ and open the template in the editor.
                     <tr>
                         <td>x_trans_id</td>
                         <td>string(50)</td>
-                        <td>(For VOID, CREDIT and REFUND only) TransactionID param returned by AstroPay on AUTH_CAPTURE or CAPTURE_ONLY previous tranasction</td>
+                        <td>(For VOID and REFUND only) TransactionID param returned by AstroPay on AUTH_CAPTURE or CAPTURE_ONLY previous tranasction</td>
                         <td>123456</td>
                         <td></td>
                         <td></td>
@@ -420,7 +420,7 @@ and open the template in the editor.
                     </tr>
                     <tr>
                         <td>approval_code</td>
-                        <td>Authrization code</td>
+                        <td>Authrization code returned in auth_only, used after for capture_only</td>
                         <td>string(50)</td>
                         <td>“abc123”</td>
                         <td></td>
@@ -477,7 +477,7 @@ and open the template in the editor.
                     <tr>
                         <td>x_type</td>
                         <td>Transaction type (AUTH_CAPTURE,etc.)</td>
-                        <td>“AUTH_ONLY”, “CAPTURE_ONLY”, “AUTH_CAPTURE”, “CREDIT”, “REFUND”, “VOID”</td>
+                        <td>“AUTH_ONLY”, “CAPTURE_ONLY”, “AUTH_CAPTURE”, “REFUND”, “VOID”</td>
                         <td>AUTH_CAPTURE</td>
                         <td></td>
                     </tr>
@@ -749,7 +749,7 @@ and open the template in the editor.
                     <tr>
                         <td>txn_type</td>
                         <td>The transaction type<</td>
-                        <td>“AUTH_ONLY”, “CAPTURE_ONLY”, “AUTH_CAPTURE”, “CREDIT”, “REFUND”, “VOID”</td>
+                        <td>“AUTH_ONLY”, “CAPTURE_ONLY”, “AUTH_CAPTURE”, “REFUND”, “VOID”</td>
                         <td>"auth_capture"</td>
                         <td></td>
                     </tr>

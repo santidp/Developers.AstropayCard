@@ -1,5 +1,5 @@
 
-navigateAPC();
+navigateHome();
 
 
 function navigateHome() {
