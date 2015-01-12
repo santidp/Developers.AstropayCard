@@ -48,10 +48,10 @@ and open the template in the editor.
                 Function: /verif/validator
             </h1>
             <p>
-                Basically, the /verif/validator is the WebService that recieve and process the transaction
+                /verif/validator is the WebService that recieve and process the transactional
                 requests.
             </p>
-            You’re going to use this WebService to:
+            Merchant is going to use this WebService to:
             <ul>
                 <li>
                     Authorize transactions (x_type=AUTH_ONLY)
@@ -162,7 +162,7 @@ and open the template in the editor.
                     </tr>
                     <tr>
                         <td>x_invoice_num</td>
-                        <td>String (max length: 50)</td>
+                        <td>String (max length: 20)</td>
                         <td>Unique identifier of Merchant transaction</td>
                         <td>25.69</td>
                         <td></td>
@@ -449,7 +449,7 @@ and open the template in the editor.
                     <tr>
                         <td>x_invoice_num</td>
                         <td>Invoice number provided by merchant</td>
-                        <td>string(50)</td>
+                        <td>string(20)</td>
                         <td>invoice-12345</td>
                         <td></td>
                     </tr>
