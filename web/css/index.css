@@ -41,6 +41,18 @@
     color: #D41A1A !important;
 }
 
+
+
+.border-color-apc{
+    border-color: #D41A1A  !important;
+}
+
+.border-color-cashout-card{
+    border-color: #0086B3 !important;
+}
+
+
+
 .background-color-astropay{
     background:  #D41A1A !important; 
     border-color: #D41A1A !important; 

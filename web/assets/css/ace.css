@@ -5723,7 +5723,7 @@ fieldset[disabled] .btn-warning.active {
 .btn-danger:hover,
 .btn-danger:active,
 .open > .btn-danger.dropdown-toggle {
-  background-color: #b74635 !important;
+  //background-color: #b74635 !important;
   border-color: #d15b47;
 }
 .btn-danger.no-border:hover,
